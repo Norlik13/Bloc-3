@@ -7,7 +7,12 @@ pip install django
 To launch:
 cd .\admin_interface\
 
-Create your superuser
-python manage.py createsuperuser 
-
 python manage.py runserver 
+
+Login for standard admin:
+username: user1
+password: toto
+
+Login for superadmin:
+username: louis
+password: toto
