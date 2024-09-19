@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des éléments{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Supprimer l'élément : {{ item.name }}</h2>
+    <p>Es-tu sûr de vouloir supprimer cet élément ? Cette action est irréversible.</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Oui, supprimer</button>
+        <a href="{% url 'item-list' %}" class="btn btn-secondary">Non, annuler</a>
+    </form>
+</div>
+{% endblock %}

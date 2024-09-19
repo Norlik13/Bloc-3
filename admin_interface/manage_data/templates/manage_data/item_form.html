@@ -1,0 +1,16 @@
+ {% extends 'base.html' %}
+
+{% block title %}Liste des éléments{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{% if form.instance.pk %}Modifier l'élément{% else %}Créer un nouvel élément{% endif %}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">{% if form.instance.pk %}Mettre à jour{% else %}Créer{% endif %}</button>
+        <a href="{% url 'item-list' %}" class="btn btn-secondary">Retour</a>
+    </form>
+</div>
+{% endblock %}
+
