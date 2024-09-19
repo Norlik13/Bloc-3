@@ -6,7 +6,8 @@ If you don't have django:
 
 
 To launch:
-`cd .\admin_interface\`
+
+`cd .\Bloc-3\admin_interface\`
 
 `python manage.py runserver `
 
